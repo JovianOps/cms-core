@@ -1,0 +1,2 @@
+[console_scripts]
+cms = cms:main

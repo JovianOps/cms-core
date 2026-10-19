@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cms-core"
+version = "1.0.0"
+description = "Minimal CMS: markdown content + Jinja2 templates, static or dynamic"
+requires-python = ">=3.9"
+dependencies = [
+    "jinja2>=3.1",
+    "markdown>=3.5",
+]
+
+[project.scripts]
+cms = "cms:main"
+
+[tool.setuptools.packages.find]
+include = ["cms*"]
+
+[tool.setuptools.package-data]
+cms = ["themes/default/*"]
